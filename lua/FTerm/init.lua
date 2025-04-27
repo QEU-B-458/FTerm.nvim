@@ -64,4 +64,8 @@ function M.scratch(cfg)
     M:new(cfg):open()
 end
 
+vim.api.nvim_create_user_command('FTermToggle', function()
+  require('FTerm'):toggle()
+end, {desc = "Toggle the floating terminal"})
+
 return M
